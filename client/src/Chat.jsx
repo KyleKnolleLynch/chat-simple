@@ -100,7 +100,7 @@ const Chat = () => {
   return (
     <Container>
       <Messages user={state.user} />
-      <Row>
+      <Row className="mb-4">
         <Col xs={2} style={{ padding: 0 }}>
           <FormInput label='User' value={state.user} onChange={e => setState({
             ...state,
@@ -116,10 +116,9 @@ const Chat = () => {
           />
         </Col>
         <Col xs={2} style={{ padding: 0 }}>
-          <Button onClick={() => onSend()}>Send</Button>
+          <Button onClick={() => onSend()} style={{ width: '100%' }}>Send</Button>
         </Col>
       </Row>
-
     </Container>
   );
 };
